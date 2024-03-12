@@ -15,6 +15,7 @@ class Solution:
             else:
                 res += 1 
                 # while deleteing the intervals, we will keep the one that has the min end value
+                # This strategy helps to retain intervals with smaller end values, which can potentially reduce the chance of overlapping with subsequent intervals.
                 prevEnd = min(end, prevEnd)
         return res 
 
